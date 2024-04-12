@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+:root{
+    --index: calc(1vw + 1vh);
+    --swiper-theme-color: #333333;
+    --swiper-navigation-size: 22px;
+    --swiper-navigation-sides-offset: 35px;
+    --swiper-pagination-bottom: 1px;
+    --swiper-pagination-color: #afb3c0;
+    --swiper-pagination-bullet-inactive-color: #333333;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+
+}
+body{
+    color: #cfcfcf;
+}
+.slider {
+    height: 92vh;
+}
+.slider .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide_content {
+    text-align: center;
+}
+.slide_content h2 {
+    font-size: calc(var(--index) * 1.3);
+    text-transform: uppercase;
+    letter-spacing: calc(var(--index) * 0.4);
+    margin-bottom: calc(var(--index) * 1.5);
+    position: relative;
+}
+.slide_content h2::after {
+    content: '';
+    height: 1px;
+    width: 50%;
+    background-color: rgb(33, 33, 33);
+    position: absolute;
+    left: 24%;
+    bottom: calc(var(--index) * -0.75);
+}
+.slide_content p {
+    font-size: calc(var(--index) * 0.95);
+    text-transform: uppercase;
+    color:  rgb(160, 160, 160);
+    letter-spacing: calc(var(--index) * 0.3);
+}
+.slider-navigation > * {
+    border: 1.5px solid var(--swiper-theme-color);
+    border-radius: 10em;
+    width: 38px;
+    height: 38px;
+}
+.box{
+    background: url(../img/1.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 0;
+  }
+  .social-icons>li {
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+  }
+  .social-icons a {
+    position: relative;
+    background-color: #eeeeee00;
+    display: block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: background-color .3s ease-in-out;
+    width: 2rem;
+    height: 2rem;
+    border-radius: .25rem;
+  }
+  .social-icons a:hover {
+    background-color: #e0e0e000;
+  }
+  .social-icons a::before {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    left: 0rem;
+    top: 0rem;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+  }
+  .social-icons .social-icon-vk::before {
+    background-image: url(../img/vk3.png);
+  }
+  .social-icons .social-icon-telegram::before {
+    background-image: url(../img/Telegram3.png);
+  }
+  .social-icons .social-icon-whatsapp::before {
+    background-image: url(../img/whatsapp3.png);
+  }
